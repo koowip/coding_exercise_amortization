@@ -14,7 +14,7 @@ export default function InputComp({setAmoritzationData}) {
     Seperated out changing of inputs into its own function as to easily deconstruct the target.name 
     and target.value into the formData obj.
   */
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: { target: { name: any; value: any; }; }) => {
     const { name, value } = event.target;
     setFormData({
     ...formData,
@@ -23,9 +23,8 @@ export default function InputComp({setAmoritzationData}) {
    };
  
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
-    console.log(event);
     const amortizationSchedule = calculateAmortizationSchedule(formData.loanAmount, formData.loanLength, formData.loanInterestRate);
     setAmoritzationData(amortizationSchedule);
   };

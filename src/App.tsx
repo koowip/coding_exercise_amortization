@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
 import InputComp from './Components/InputComp'
+import DataTableComp from './Components/DataTableComp';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
   return (
     <>
       <InputComp setAmoritzationData={setAmoritzationData}/>
-      
+      <DataTableComp data={amortizationData}/>
     </>
   )
 }
