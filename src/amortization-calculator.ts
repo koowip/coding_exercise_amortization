@@ -12,7 +12,7 @@ interface MonthlyData {
 
 
 
-export default function calculateAmortizationSchedule(loanAmount: number, loanLength: number, interestRate: number){
+export default function calculateAmortizationSchedule(loanAmount: number, loanLength: number, interestRate: number): MonthlyData[] {
   
   //All initial calculations for monthly payment
   let currentAmount = loanAmount;
@@ -39,11 +39,11 @@ export default function calculateAmortizationSchedule(loanAmount: number, loanLe
     totalInterest += interest;
 
     //return obj
-    const currentMonthlyData = {
-      loanMonth: i + 1,
+    const currentMonthlyData: MonthlyData = {
+      monthOfLoan: i + 1,
       balance: precisionRound(currentAmount),
       principalPaid: precisionRound(principal),
-      interest: precisionRound(interest),
+      interestPaid: precisionRound(interest),
       payment: currentAmount < principal ? precisionRound(principal):  precisionRound(monthlyPayment),
       totalInterest: precisionRound(totalInterest),
       totalPaid: precisionRound(totalPaid)
