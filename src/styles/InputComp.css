@@ -1,0 +1,27 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  padding: 0 20px;
+ }
+ 
+ .input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+ }
+ 
+ .input-group label {
+  width: 50%;
+ }
+ 
+ .input-group input {
+  width: 60%;
+ }
+ 
+ form button {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+ }
