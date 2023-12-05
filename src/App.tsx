@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <InputComp setAmoritzationData={setAmoritzationData}/>
+      
     </>
   )
 }

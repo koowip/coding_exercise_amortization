@@ -35,7 +35,7 @@ export default function InputComp({setAmoritzationData}) {
   <form onSubmit={handleSubmit}>
     <input type="number" name="loanAmount" onChange={handleInputChange} placeholder="Total Loan Amount" />
     <input type="number" name="loanLength"  onChange={handleInputChange} placeholder="Loan Length in Months" />
-    <input type="number" name="loanInterestRate"  onChange={handleInputChange} placeholder="Loan Interest" />
+    <input type="number"  step="0.01" name="loanInterestRate"  onChange={handleInputChange} placeholder="Loan Interest" />
     <button type="submit">Submit</button>
   </form>
   );
