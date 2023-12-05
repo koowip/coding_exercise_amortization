@@ -1,6 +1,6 @@
 import { useState } from "react";
 import calculateAmortizationSchedule from "../amortization-calculator";
-
+import '../styles/InputComp.css'
 
 export default function InputComp({setAmoritzationData}) {
 
@@ -30,12 +30,23 @@ export default function InputComp({setAmoritzationData}) {
   };
 
 
-  return(
-  <form onSubmit={handleSubmit}>
-    <input type="number" name="loanAmount" onChange={handleInputChange} placeholder="Total Loan Amount" />
-    <input type="number" name="loanLength"  onChange={handleInputChange} placeholder="Loan Length in Months" />
-    <input type="number"  step="0.01" name="loanInterestRate"  onChange={handleInputChange} placeholder="Loan Interest" />
-    <button type="submit">Submit</button>
-  </form>
-  );
+  return (
+    <div className="form-container">
+     <form onSubmit={handleSubmit}>
+       <div className="input-group">
+         <label>Total Loan Amount</label>
+         <input type="number" name="loanAmount" onChange={handleInputChange} placeholder="Total Loan Amount" />
+       </div>
+       <div className="input-group">
+         <label>Loan Length in Months</label>
+         <input type="number" name="loanLength" onChange={handleInputChange} placeholder="Loan Length in Months" />
+       </div>
+       <div className="input-group">
+         <label>Loan Interest</label>
+         <input type="number" step="0.01" name="loanInterestRate" onChange={handleInputChange} placeholder="Loan Interest" />
+       </div>
+       <button type="submit">Submit</button>
+     </form>
+    </div>
+   );   
 }
