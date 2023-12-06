@@ -15,7 +15,8 @@ export default function InputComp({setAmoritzationData}) {
   const [totalsInfo, setTotalsInfo] = useState({
     loanAmount: 0,
     totalPaid: 0,
-    totalInterestPaid: 0
+    totalInterestPaid: 0,
+    monthlyPayment: 0
   })
   /*
     Seperated out changing of inputs into its own function as to easily deconstruct the target.name 
@@ -37,7 +38,8 @@ export default function InputComp({setAmoritzationData}) {
     setTotalsInfo({
       loanAmount: formData.loanAmount,
       totalPaid: amortizationSchedule[amortizationSchedule.length - 1].totalPaid,
-      totalInterestPaid: amortizationSchedule[amortizationSchedule.length - 1].totalInterest
+      totalInterestPaid: amortizationSchedule[amortizationSchedule.length - 1].totalInterest,
+      monthlyPayment: amortizationSchedule[1].payment
     })
   };
 

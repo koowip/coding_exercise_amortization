@@ -42,9 +42,9 @@ export default function calculateAmortizationSchedule(loanAmount: number, loanLe
     const currentMonthlyData: MonthlyData = {
       monthOfLoan: i + 1,
       balance: precisionRound(currentAmount),
-      principalPaid: precisionRound(principal),
+      principalPaid: currentAmount < principal ? precisionRound(principal - interest) : precisionRound(principal),
       interestPaid: precisionRound(interest),
-      payment: currentAmount < principal ? precisionRound(principal):  precisionRound(monthlyPayment),
+      payment: currentAmount < principal ? precisionRound(principal) :  precisionRound(monthlyPayment),
       totalInterest: precisionRound(totalInterest),
       totalPaid: precisionRound(totalPaid)
     }
