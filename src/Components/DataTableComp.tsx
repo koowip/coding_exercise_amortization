@@ -1,4 +1,5 @@
 import '../styles/DataTableComp.css'
+import currencyFormat from '../currency-format';
 
 export default function DataTableComp({amoritizationData}) {
 
@@ -19,13 +20,13 @@ export default function DataTableComp({amoritizationData}) {
         <tbody>
           {amoritizationData.map((data: any, index: number) => (
             <tr key={index}>
-              <td>{data.monthOfLoan}</td>
-              <td>{data.balance}</td>
-              <td>{data.principalPaid}</td>
-              <td>{data.interestPaid}</td>
-              <td>{data.payment}</td>
-              <td>{data.totalInterest}</td>
-              <td>{data.totalPaid}</td>
+              <td>{currencyFormat(parseFloat(data.monthOfLoan))}</td>
+              <td>{currencyFormat(parseFloat(data.balance))}</td>
+              <td>{currencyFormat(parseFloat(data.principalPaid))}</td>
+              <td>{currencyFormat(parseFloat(data.interestPaid))}</td>
+              <td>{currencyFormat(parseFloat(data.payment))}</td>
+              <td>{currencyFormat(parseFloat(data.totalInterest))}</td>
+              <td>{currencyFormat(parseFloat(data.totalPaid))}</td>
             </tr>
           ))}
         </tbody>

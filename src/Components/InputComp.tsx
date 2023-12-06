@@ -1,5 +1,6 @@
 import { useState } from "react";
 import calculateAmortizationSchedule from "../amortization-calculator";
+import currencyFormat from "../currency-format";
 import '../styles/InputComp.css'
 import TotalsInfoComp from "./TotalsInfoComp";
 
@@ -41,7 +42,7 @@ export default function InputComp({setAmoritzationData}) {
     })
   };
 
-
+  
   return (
   <div>
     <div className="form-container">
