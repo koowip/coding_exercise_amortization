@@ -20,7 +20,7 @@ export default function DataTableComp({amoritizationData}) {
         <tbody>
           {amoritizationData.map((data: any, index: number) => (
             <tr key={index}>
-              <td>{currencyFormat(parseFloat(data.monthOfLoan))}</td>
+              <td>{data.monthOfLoan}</td>
               <td>{currencyFormat(parseFloat(data.balance))}</td>
               <td>{currencyFormat(parseFloat(data.principalPaid))}</td>
               <td>{currencyFormat(parseFloat(data.interestPaid))}</td>

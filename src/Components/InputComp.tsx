@@ -17,17 +17,16 @@ export default function InputComp({setAmoritzationData}) {
     totalPaid: 0,
     totalInterestPaid: 0
   })
-
   /*
     Seperated out changing of inputs into its own function as to easily deconstruct the target.name 
     and target.value into the formData obj.
   */
   const handleInputChange = (event: { target: { name: any; value: any; }; }) => {
     const { name, value } = event.target;
-    setFormData({
-    ...formData,
-    [name]: value
-    });
+      setFormData({
+        ...formData,
+        [name]: value
+      });
    };
  
 
@@ -42,7 +41,7 @@ export default function InputComp({setAmoritzationData}) {
     })
   };
 
-  
+
   return (
   <div>
     <div className="form-container">
@@ -53,7 +52,7 @@ export default function InputComp({setAmoritzationData}) {
         </div>
         <div className="input-group">
           <label>Loan Length in Months</label>
-          <input type="number" name="loanLength" onChange={handleInputChange} placeholder="Loan Length in Months" />
+          <input type="text" pattern="[1-9]\d{0,2}" title="Please enter a valid number 1-999" name="loanLength" onChange={handleInputChange} placeholder="Loan Length in Months" />
         </div>
         <div className="input-group">
           <label>Loan Interest</label>
