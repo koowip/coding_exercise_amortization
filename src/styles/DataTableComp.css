@@ -1,0 +1,31 @@
+.data-table {
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+ }
+ 
+ .data-table table {
+  border-collapse: collapse;
+  width: 80%;
+  padding: 0;
+  margin: 0;
+ }
+ 
+ .data-table th, .data-table td {
+  border: 1px solid #ddd;
+  line-height: 2;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+ }
+ 
+ .data-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(54, 117, 128);
+  color: white;
+ }

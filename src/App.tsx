@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <InputComp setAmoritzationData={setAmoritzationData}/>
-      <DataTableComp amoritizationData={amortizationData}/>
+      {amortizationData.length > 0 && <DataTableComp amoritizationData={amortizationData}/>}
     </>
   )
 }
